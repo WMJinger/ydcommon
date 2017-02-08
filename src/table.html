@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+	<meta charset="utf-8"/>
+	<style type="text/css">
+		h2{
+			font-size: 16px;
+			padding: 14px;
+			border-bottom: 1px solid #e4e4e4;
+		}
+		.section{
+			padding:20px 14px;
+		}
+		#sudoku{
+			width: 400px;
+		}
+	</style>
+	<script src="js/libjs/jquery-1.11.1.min.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+<h2>表头固定</h2>
+<div class="section">
+	<div class="fix-head-table">
+		<table class="table01">
+			<tr>
+				<th width="15%">省份</th>
+				<th width="20%">电信</th>
+				<th width="20%">联通</th>
+				<th width="20%">移动</th>
+				<th width="25%">合计</th>
+			</tr>
+		</table>
+		<div class="tableBody ligth-scroll">
+			<table class="table01">
+				<tr>
+					<td width="15%">安徽</td>
+					<td width="20%">1549685</td>
+					<td width="20%">16549</td>
+					<td width="20%">48458</td>
+					<td width="25%">15649823</td>
+				</tr>
+				<tr>
+					<td>测试</td>
+					<td>1549685</td>
+					<td>16549</td>
+					<td>48458</td>
+					<td>15649823</td>
+				</tr>
+				<tr>
+					<td>测试</td>
+					<td>1549685</td>
+					<td>16549</td>
+					<td>48458</td>
+					<td>15649823</td>
+				</tr>
+				<tr>
+					<td>测试</td>
+					<td>1549685</td>
+					<td>16549</td>
+					<td>48458</td>
+					<td>15649823</td>
+				</tr>
+				<tr>
+					<td>测试</td>
+					<td>1549685</td>
+					<td>16549</td>
+					<td>48458</td>
+					<td>15649823</td>
+				</tr>
+				<tr>
+					<td>ended</td>
+					<td>1549685</td>
+					<td>16549</td>
+					<td>48458</td>
+					<td>15649823</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<h2>超出缩放</h2>
+<div class="section">
+	<table class="table01" id="responsive-table">
+		<tr>
+			<th>字段一</th>
+			<th>字段二</th>
+			<th>字段三</th>
+			<th>字段四</th>
+			<th>字段五</th>
+			<th>字段六</th>
+			<th>字段七</th>
+			<th>字段八</th>
+			<th>字段九</th>
+			<th>字段十</th>
+			<th>字段十一</th>
+			<th>字段十二</th>
+			<th>字段十三</th>
+			<th>字段十四</th>
+			<th>字段十五</th>
+			<th>字段十六</th>
+			<th>字段十七</th>
+			<th>字段十八</th>
+		</tr>
+		<tr>
+			<td>测试一</td>
+			<td>1549685</td>
+			<td>16549</td>
+			<td>48458</td>
+			<td>15649823</td>
+			<td>15649823</td>
+			<td>15649823</td>
+			<td>8</td>
+			<td>9</td>
+			<td>10</td>
+			<td>11</td>
+			<td>12</td>
+			<td>13</td>
+			<td>14</td>
+			<td>15</td>
+			<td>16</td>
+			<td>17</td>
+			<td>18</td>
+		</tr>
+		<tr>
+			<td>测试二</td>
+			<td>氧化</td>
+			<td>样式</td>
+			<td>4845江湖8</td>
+			<td>实验</td>
+			<td>净化</td>
+			<td>祖曦</td>
+			<td>组词</td>
+			<td>误会</td>
+			<td>爱惜</td>
+			<td>信息</td>
+			<td>惊喜</td>
+			<td>物流</td>
+			<td>电商</td>
+			<td>习惯</td>
+			<td>安静</td>
+			<td>竞品</td>
+			<td>禅西</td>
+		</tr>
+		<tr>
+			<td>测试三</td>
+			<td>1549685</td>
+			<td>16549</td>
+			<td>48458</td>
+			<td>15649823</td>
+			<td>15649823</td>
+			<td>15649823</td>
+			<td>8</td>
+			<td>9</td>
+			<td>10</td>
+			<td>11</td>
+			<td>121212121212121212121212</td>
+			<td>13agioerfdnsjgoioergjoerjgoi</td>
+			<td>14agioerfdnsjgoioergjoerjgoi</td>
+			<td>15agioerfdnsjgoioergjoerjgoi</td>
+			<td>16agioerfdnsjgoioergjoerjgoi</td>
+			<td>17agioerfdnsjgoioergjoerjgoi</td>
+			<td>18agioerfdnsjgoioergjoerjgoi</td>
+		</tr>
+	</table>
+</div>
+<script type="text/javascript">
+	// 响应式表格
+    responsiveTable($('#responsive-table'),'100',1);
+</script>
+<h2>仿滑屏表格-ul-li(兼容IE8+)</h2>
+<div class="section">
+	<div class="table-slide" id="slideTable">
+		<a href="javascript:;" class="prev-btn enabled" id="prevQuestion">&lt;</a>
+		<a href="javascript:;" class="next-btn" id="nextQuestion">&gt;</a>
+		<ul class="table-slide-th">
+			<li class="fix-li">
+				<ul>
+					<li class="table-slide-td"><span class="td">字段一</span></li>
+					<li class="table-slide-td"><span class="td">字段二</span></li>
+				</ul>
+			</li>
+			<li class="slide-li">
+				<ul>
+					<li class="table-slide-td"><span class="td">字段三</span></li>
+					<li class="table-slide-td"><span class="td">字段四</span></li>
+					<li class="table-slide-td"><span class="td">字段五</span></li>
+					<li class="table-slide-td"><span class="td">字段六</span></li>
+					<li class="table-slide-td"><span class="td">字段七</span></li>
+					<li class="table-slide-td"><span class="td">字段八</span></li>
+					<li class="table-slide-td"><span class="td">字段九</span></li>
+					<li class="table-slide-td"><span class="td">字段十</span></li>
+				</ul>
+			</li>
+		</ul>
+		<ul class="table-slide-tr">
+			<li class="fix-li">
+				<ul>
+					<li class="table-slide-td"><span class="td">张盼</span></li>
+					<li class="table-slide-td"><span class="td">2016.02.02 10:00:002016.02.02 10:00:002016.02.02 10:00:002016.02.02 10:00:002016.02.02 10:00:002016.02.02 10:00:002016.02.02 10:00:00</span></li>
+				</ul>
+			</li>
+			<li class="slide-li">
+				<ul>
+					<li class="table-slide-td"><span class="td">既不是满意也不是不满意</span></li>
+					<li class="table-slide-td"><span class="td">字数测试请忽略字数测试请忽略字数测试请忽略字数测试请忽略字数测试请忽略字数测试请忽略字数测试请忽略字数测试请忽略</span></li>
+					<li class="table-slide-td"><span class="td">答案三</span></li>
+					<li class="table-slide-td"><span class="td">答案四</span></li>
+					<li class="table-slide-td"><span class="td">答案五</span></li>
+					<li class="table-slide-td"><span class="td">答案六</span></li>
+					<li class="table-slide-td"><span class="td">答案七</span></li>
+					<li class="table-slide-td"><span class="td">答案八</span></li>
+				</ul>
+			</li>
+		</ul>
+		<ul class="table-slide-tr">
+			<li class="fix-li">
+				<ul>
+					<li class="table-slide-td"><span class="td">司徒俊杰</span></li>
+					<li class="table-slide-td"><span class="td">2016.02.02 10:00:00</span></li>
+				</ul>
+			</li>
+			<li class="slide-li">
+				<ul>
+					<li class="table-slide-td"><span class="td">不太满意</span></li>
+					<li class="table-slide-td"><span class="td"></span></li>
+					<li class="table-slide-td"><span class="td"></span></li>
+					<li class="table-slide-td"><span class="td">答案四</span></li>
+					<li class="table-slide-td"><span class="td">答案四</span></li>
+					<li class="table-slide-td"><span class="td">答案四</span></li>
+					<li class="table-slide-td"><span class="td">答案四</span></li>
+					<li class="table-slide-td"><span class="td">答案四</span></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		slideTable($('#slideTable'));
+	</script>
+</div>
+</body>
+</html>

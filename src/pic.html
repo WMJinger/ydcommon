@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+	<meta charset="utf-8"/>
+	<style type="text/css">
+		h2{
+			font-size: 16px;
+			padding: 14px;
+			border-bottom: 1px solid #e4e4e4;
+		}
+		.section{
+			padding:20px 14px;
+		}
+		#sudoku{
+			width: 400px;
+		}
+		input{
+			margin-bottom: 14px;
+		}
+	</style>
+	<script src="js/libjs/jquery-1.11.1.min.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+<h2>响应式图片 不定比例，以父元素尺寸为准</h2>
+<div class="section">
+     <span style="display:inline-block;width: 20%;height: 120px;"><img class="responsive-img" src="images/2.jpg"/></span>
+     <span style="display:inline-block;width: 100px;height: 120px;"><img class="responsive-img" src="images/1.jpg"/></span>
+</div>
+<h2>九宫格图片 4:3比例</h2>
+<div class="section">
+	<div class="sudoku-wrap" id="sudoku2" style="width: 600px;">
+		<span><img src="images/1.jpg" /></span>
+		<span><img src="images/2.jpg" /></span>
+		<span><img src="images/3.jpg" /></span>
+		<span><img src="images/4.jpg" /></span>
+		<span><img src="images/5.jpg" /></span>
+	</div>
+</div>
+<script type="text/javascript">
+	// 九宫格图片
+    setPicSize($('#sudoku2'));
+</script>
+</body>
+</html>

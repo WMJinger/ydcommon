@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+	<meta charset="utf-8"/>
+	<style type="text/css">
+		h2{
+			font-size: 16px;
+			padding: 14px;
+			border-bottom: 1px solid #e4e4e4;
+		}
+		.section{
+			padding:20px 14px;
+		}
+		#sudoku{
+			width: 400px;
+		}
+		input{
+			margin-bottom: 14px;
+		}
+	</style>
+	<script src="js/libjs/jquery-1.11.1.min.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+<h2>按钮</h2>
+<div class="section">
+	<a class="btn btn1" href="javascript:;">保存</a>
+	<a class="btn btn2" href="javascript:;">取消</a>
+	<a class="btn btn3" href="javascript:;">按钮1</a>
+	<a class="btn btn4" href="javascript:;">按钮2</a>
+</div>
+<h2>文本框</h2>
+<div class="section">
+	<input class="txt txt-w60" type="txt" placeholder="请输入"/>
+	<input class="txt txt-w120" type="txt" placeholder="请输入"/>
+	<input class="txt txt-w180" type="txt" placeholder="请输入"/>
+	<input class="txt txt-w240" type="txt" placeholder="请输入"/>
+	<input class="txt txt-w300" type="txt" placeholder="请输入"/>
+	<input class="txt txt-w360" type="txt" placeholder="请输入"/>
+	<input class="txt txt-w420" type="password" placeholder="请输入" />
+	<div class="txt-left">
+		<input type="text" class="txt" placeholder="请输入用户名" />
+		<div class="txt-icon"><i class="user-ico"></i></div>
+	</div>
+	<div class="txt-left">
+		<input type="text" class="txt" placeholder="请输入密码" />
+		<div class="txt-icon"><i class="psw-ico"></i></div>
+	</div>
+	<div class="txt-left">
+		<input type="text" class="txt" placeholder="请输入密码" />
+		<div class="txt-icon"><i class="mail-ico"></i></div>
+	</div>
+</div>
+<h2>多行文本框</h2>
+<div class="section">
+	<textarea class="tarea txt-w240"></textarea>
+</div>
+<h2>上传按钮</h2>
+<div class="section">
+	<input class="default-ifile" type="file" />
+	<span class="define-ifile-wrap">
+		<input type="text" class="txt txt-w180" />
+		<i class="define-ifile">上传<input type="file"/></i>
+	</span>
+</div>
+<h2>默认下拉选项+单选多选</h2>
+<div class="section">
+	<select class="sect">
+		<option>选项一</option>
+		<option>选项二</option>
+		<option>选项三</option>
+	</select>
+	<label class="default-rbox"><input type="checkbox" checked="">必填</label>
+	<label class="default-rbox"><input type="radio" name="1" checked="">选项一</label>
+	<label class="default-rbox"><input type="radio" name="1" checked="">选项二</label>
+</div>
+<h2>默认单选、多选</h2>
+<div class="section">
+	<label class="define-radio disabled checked" name="fruit">苹果(禁用)</label>
+	<label class="define-radio" name="fruit">橘子</label>
+	<label class="define-radio" name="fruit">菠萝</label>
+
+	<a href="javascript:alert(inputval('fruit'));">获取水果值</a>
+	<a href="javascript:inputset('fruit','橘子')">设置值为橘子</a>
+	<br/>
+	<label class="define-radio" name="animal">大象</label>
+	<label class="define-radio checked" name="animal">老虎</label>
+	<label class="define-radio" name="animal">熊猫</label>
+
+	<a href="javascript:alert(inputval('animal'));">获取动物值</a>
+	<a href="javascript:inputset('animal','熊猫')">设置值为熊猫</a>
+	<br/>
+	<label class="define-cbox disabled" name="one">选项一</label>
+	<label class="define-cbox checked" id="two">选项二</label>
+	<label class="define-cbox" name="three">选项三</label>
+
+	<a href="javascript:alert(inputval('one'));">获取选项一</a>
+	<a href="javascript:alert(inputval('two'));">获取选项二</a>
+	<a href="javascript:inputset('three','选项三')">选中选项三</a>
+	<br/>
+	<a id="addcbxbtn" href="javascript:;">新增单选</a>
+	<div id="addcbx"></div>
+	<script type="text/javascript">
+		$('#addcbxbtn').click(function(){
+			$('#addcbx').append('<label class="define-cbox" name="one">选项一</label>');
+		});
+	</script>
+</div>
+</body>
+</html>
