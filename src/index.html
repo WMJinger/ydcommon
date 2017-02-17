@@ -1,100 +1,163 @@
 <!DOCTYPE html>
-<html style="*overflow-y: hidden;">
+<html>
 <head>
-	<title>UI-PC</title>
+	<title>UI-YD</title>
 	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi"/>
 	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+	<link href="css/date/mobiscroll.css" rel="stylesheet" />
+	<link href="css/date/mobiscroll_date.css" rel="stylesheet" />
+	<script src="js/libjs/jquery-1.11.1.min.js"></script>
+	<script src="js/common.js"></script>
 </head>
 <body>
-<div class="main-content">
-	<div class="default-head-content">
-		<a class="head-logo" href="#">Logo</a>
-		<ul class="head-nav">
-			<li><a>首页</a></li>
-			<li><a>业务</a></li>
-			<li><a>联系我们</a></li>
-		</ul>
-		<ul class="head-user">
-			<li class="dropt-user">
-				<a href="#">管理员<i class="triangle-down"></i></a>
-				<ul>
-					<li><a>修改密码</a></li>
-					<li><a>退出</a></li>
-				</ul>
-			</li>
-			<li><a>公告</a></li>
-		</ul>
+<div class="container">
+	<div class="topbar">
+		<span class="topbar-title">首页</span>
 	</div>
-	<div class="default-left-content">
-		<div class="default-slide-nav-wrap">
-			<div class="slide-nav-top">
-				<a class="slide-nav-btn"><i class="hamburg-ico"></i></a>
-			</div>
-			<ul class="default-slide-nav black-scroll">
-				<li class="first-nav-li current">
-					<div class="slide-link" href="javascript:;" url="formtools.html">
-						<i class="computer-ico"></i>
-						<span class="nav-li-text">表单</span>
+	<div class="content">
+		<ul class="form-list">
+			<li>
+				<span class="list-name">文本框</span>
+				<span class="list-detial">
+					<input type="text" class="txt txt1" placeholder="请输入用车人" value="张敬轩" />
+				</span>
+			</li>
+			<li>
+				<span class="list-name">下拉框</span>
+				<span class="list-detial">
+					<div id="dropeList1">
+						<a href="javascript:;" class="dropValue">请选择</a>
+						<!-- 下拉选项 S -->
+						<div class="dropList">
+							<span class="dropList-title">选项一</span>
+							<ul class="dropList-detial">
+								<li><span class="valueLi">请选择</span><i class="iconfont rbx-ico">&#xe651;</i></li>
+								<li class="selected"><span class="valueLi">内容一</span><i class="iconfont rbx-ico">&#xe651;</i></li>
+								<li><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe651;</i></li>
+								<li><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe651;</i></li>
+								<li><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe651;</i></li>
+								<li><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe651;</i></li>
+								<li><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe651;</i></li>
+								<li><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe651;</i></li>
+								<li><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe651;</i></li>
+								<li><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe651;</i></li>
+								<li><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe651;</i></li>
+								<li><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe651;</i></li>
+								<li><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe651;</i></li>
+								<li><span class="valueLi">字数测试字数测试字数测试字数测试字数测试字数测试字数测试</span><i class="iconfont rbx-ico">&#xe651;</i></li>
+								<li><span class="valueLi">其他</span><i class="iconfont rbx-ico">&#xe651;</i></li>
+							</ul>
+						</div>
+						<!-- 下拉选项 E -->
+						<i class="iconfont down-ico">&#xe607;</i>
 					</div>
-					<ul>
-						<li class="second-nav-li">
-							<div class="slide-link" url="">
-								<i class="diot-ico"></i>
-								<span class="nav-li-text">二级</span>
-							</div>
-						</li>
-					</ul>
-				</li>
-				<li class="first-nav-li">
-					<div class="slide-link" href="javascript:;" url="pic.html">
-						<i class="computer-ico"></i>
-						<span class="nav-li-text">图片</span>
-					</div>
-				</li>
-				<li class="first-nav-li">
-					<div class="slide-link" href="javascript:;" url="popwin.html">
-						<i class="computer-ico"></i>
-						<span class="nav-li-text">弹窗</span>
-					</div>
-				</li>
-				<li class="first-nav-li">
-					<div class="slide-link" href="javascript:;" url="widget.html">
-						<i class="computer-ico"></i>
-						<span class="nav-li-text">选项卡</span>
-					</div>
-				</li>
-				<li class="first-nav-li">
-					<div class="slide-link" href="javascript:;" url="table.html">
-						<i class="computer-ico"></i>
-						<span class="nav-li-text">表格</span>
-					</div>
-				</li>
-				<li class="first-nav-li">
-					<div class="slide-link" href="javascript:;" url="load.html">
-						<i class="computer-ico"></i>
-						<span class="nav-li-text">加载动画</span>
-					</div>
-				</li>
-				<li class="first-nav-li">
-					<div class="slide-link" href="javascript:;" url="animate.html">
-						<i class="computer-ico"></i>
-						<span class="nav-li-text">动画</span>
-					</div>
-				</li>
-				<li class="first-nav-li">
-					<div class="slide-link" href="javascript:;" url="">
-						<i class="computer-ico"></i>
-						<span class="nav-li-text">字数测试请忽略请忽略请忽略请忽略请忽略请忽略</span>
-					</div>
-				</li>
-			</ul>
+					<script type="text/javascript">
+						var dropt=new DroptList('dropeList1');
+						dropt.init();
+					</script>
+				</span>
+			</li>
+			<li>
+				<span class="list-name">日期+时间</span>
+				<span class="list-detial">
+					<input id="dateTime" type="text" class="txt txt-date" placeholder="0000-00-00 00:00" />
+					<i class="iconfont time-ico">&#xe64c;</i>
+				</span>
+			</li>
+			<li>
+				<span class="list-name">日期</span>
+				<span class="list-detial">
+					<input id="date" type="text" class="txt txt-date" placeholder="0000-00-00" />
+					<i class="iconfont time-ico">&#xe64c;</i>
+				</span>
+			</li>
+			<li>
+				<span class="list-name">时间</span>
+				<span class="list-detial">
+					<input id="time" type="text" class="txt txt-date" placeholder="00:00" />
+					<i class="iconfont time-ico">&#xe64c;</i>
+				</span>
+			</li>
+			<li>
+				<span class="list-name">单选</span>
+				<span class="list-detial">
+					<span class="cbox">
+						<input type="radio" name="c01" id="01"></input>
+						<!--for属性表示在label内点击，就会触发radio控件-->
+						<label for="01" ><i class="iconfont cbox-ico">&#xe651;</i>选项一</label>
+					</span>
+					<span class="cbox">
+						<input type="radio" name="c01" id="02"></input>
+						<label for="02" ><i class="iconfont cbox-ico">&#xe651;</i>选项二</label>
+					</span>
+				</span>
+			</li>
+			<li>
+				<span class="list-name">多选</span>
+				<span class="list-detial">
+					<span class="cbox">
+						<input type="checkbox" id="03"></input>
+						<label for="03" ><i class="iconfont cbox-ico">&#xe718;</i>选项一</label>
+					</span>
+					<span class="cbox">
+						<input type="checkbox" id="04"></input>
+						<label for="04" ><i class="iconfont cbox-ico">&#xe718;</i>选项二</label>
+					</span>
+				</span>
+			</li>
+		</ul>
+		<div class="btn-wrap">
+			<a href="javascript:;" class="btn btn1">btn1:确定</a>
+			<a href="javascript:;" class="btn btn2">btn2:取消</a>
+			<a href="javascript:;" class="btn btn3">btn3</a>
+			<a href="javascript:;" class="btn btn4">btn4</a>
+			<a href="javascript:;" class="btn btn-disabled">btn-disabled</a>
 		</div>
 	</div>
-	<div class="default-right-content" style="background-color: #ccc;">
-		<iframe class="frame-content" src="formtools.html" frameborder="0" scrolling="auto" border="0" frameborder="no"></iframe>
+	<div class="bottombar">
+		<a class="barLi current" href="#">
+			<i class="iconfont">&#xe600;</i>
+			<p>表单</p>
+		</a>
+		<a class="barLi" href="#">
+			<i class="iconfont">&#xe649;</i>
+			<p>考核预评估</p>
+		</a>
+		<a class="barLi" href="#">
+			<i class="iconfont">&#xe604;</i>
+			<p>工单查阅</p>
+		</a>
+		<a class="barLi" href="#">
+			<i class="iconfont">&#xe619;</i>
+			<p>我</p>
+		</a>
 	</div>
 </div>
-<script src="js/libjs/jquery-1.11.1.min.js"></script>
-<script src="js/common.js"></script>
+<script src="js/date/mobiscroll_date.js" charset="gb2312"></script> 
+<script src="js/date/mobiscroll.js"></script> 
+<script type="text/javascript">
+$(function () {
+	var currYear = (new Date()).getFullYear();	
+	var opt={};
+	opt.date = {preset : 'date'};
+	opt.datetime = {preset : 'datetime'};
+	opt.time = {preset : 'time'};
+	opt.default = {
+		theme: 'android-ics light', //皮肤样式
+		display: 'bottom', //显示方式 
+		mode: 'scroller', //日期选择模式
+		dateFormat: 'yyyy-mm-dd',
+		lang: 'zh',
+		showNow: false,
+		nowText: "今天",
+		startYear: currYear, //开始年份
+		endYear: currYear + 5 //结束年份
+	};
+	$("#date").mobiscroll($.extend(opt['date'], opt['default']));
+	$("#dateTime").mobiscroll($.extend(opt['datetime'], opt['default']));
+	$("#time").mobiscroll($.extend(opt['time'], opt['default']));
+});
+</script>
 </body>
 </html>
