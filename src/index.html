@@ -26,35 +26,34 @@
 			<li>
 				<span class="list-name">下拉框</span>
 				<span class="list-detial">
-					<div id="dropeList1">
+					<div id="dropeList2">
 						<a href="javascript:;" class="dropValue">请选择</a>
 						<!-- 下拉选项 S -->
 						<div class="dropList">
-							<span class="dropList-title">选项一</span>
+							<span class="dropList-title">所属分公司</span>
 							<ul class="dropList-detial">
-								<li><span class="valueLi">请选择</span><i class="iconfont rbx-ico">&#xe651;</i></li>
-								<li class="selected"><span class="valueLi">内容一</span><i class="iconfont rbx-ico">&#xe651;</i></li>
-								<li><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe651;</i></li>
-								<li><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe651;</i></li>
-								<li><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe651;</i></li>
-								<li><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe651;</i></li>
-								<li><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe651;</i></li>
-								<li><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe651;</i></li>
-								<li><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe651;</i></li>
-								<li><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe651;</i></li>
-								<li><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe651;</i></li>
-								<li><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe651;</i></li>
-								<li><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe651;</i></li>
-								<li><span class="valueLi">字数测试字数测试字数测试字数测试字数测试字数测试字数测试</span><i class="iconfont rbx-ico">&#xe651;</i></li>
-								<li><span class="valueLi">其他</span><i class="iconfont rbx-ico">&#xe651;</i></li>
+								<li svalue="0"><span class="valueLi">请选择</span><i class="iconfont rbx-ico">&#xe635;</i></li>
+								<li svalue="1"><span class="valueLi">市公司</span><i class="iconfont rbx-ico">&#xe635;</i></li>
+								<li svalue="2"><span class="valueLi">分公司一</span><i class="iconfont rbx-ico">&#xe635;</i></li>
+								<li svalue="3"><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe635;</i></li>
+								<li svalue="4"><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe635;</i></li>
+								<li svalue="5"><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe635;</i></li>
+								<li svalue="6"><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe635;</i></li>
+								<li svalue="7"><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe635;</i></li>
+								<li svalue="8"><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe635;</i></li>
+								<li svalue="9"><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe635;</i></li>
+								<li svalue="10"><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe635;</i></li>
+								<li svalue="11"><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe635;</i></li>
+								<li svalue="12"><span class="valueLi">内容二</span><i class="iconfont rbx-ico">&#xe635;</i></li>
+								<li svalue="13"><span class="valueLi">字数测试字数测试字数测试字数测试字数测试字数测试字数测试</span><i class="iconfont rbx-ico">&#xe635;</i></li>
 							</ul>
 						</div>
 						<!-- 下拉选项 E -->
 						<i class="iconfont down-ico">&#xe607;</i>
 					</div>
 					<script type="text/javascript">
-						var dropt=new DroptList('dropeList1');
-						dropt.init();
+						var dropt2=new DroptList('dropeList2');
+						dropt2.init(1);
 					</script>
 				</span>
 			</li>
@@ -77,6 +76,18 @@
 				<span class="list-detial">
 					<input id="time" type="text" class="txt txt-date" placeholder="00:00" />
 					<i class="iconfont time-ico">&#xe64c;</i>
+				</span>
+			</li>
+			<li>
+				<span class="list-name">换行</span>
+				<span class="list-detial">
+					我是换行字我是换行字我是换行字我是换行字我是换行字我是换行字我是换行字我是换行字我是换行字
+				</span>
+			</li>
+			<li>
+				<span class="list-name">是否加入</span>
+				<span class="list-detial">
+					<i class="iconfont switch">&#xe6da;</i>
 				</span>
 			</li>
 			<li>
@@ -108,31 +119,27 @@
 			</li>
 		</ul>
 		<div class="btn-wrap">
-			<a href="javascript:;" class="btn btn1">btn1:确定</a>
-			<a href="javascript:;" class="btn btn2">btn2:取消</a>
+			<a href="javascript:popWindow($('#pop1'),'80%','0.5rem');" class="btn btn1">btn1:两列弹窗</a>
+			<div class="pop-wrap" id="pop1">
+				<div class="pop-content">你点击了按钮</div>
+				<div class="btn-wrap">
+					<a href="javascript:closePop($('#pop1'));" class="btn btn5">取消</a>
+					<a href="javascript:;" class="btn btn6">确定</a>
+				</div>
+			</div>
+			<a href="javascript:popWindow($('#pop2'),'80%','0.5rem');" class="btn btn2">btn2:一列弹窗</a>
+			<div class="pop-wrap" id="pop2">
+				<div class="pop-content">不可提交</div>
+				<div class="btn-wrap">
+					<a href="javascript:closePop($('#pop2'));" class="btn btn7">确定</a>
+				</div>
+			</div>
 			<a href="javascript:;" class="btn btn3">btn3</a>
 			<a href="javascript:;" class="btn btn4">btn4</a>
 			<a href="javascript:;" class="btn btn-disabled">btn-disabled</a>
 		</div>
 	</div>
-	<div class="bottombar">
-		<a class="barLi current" href="#">
-			<i class="iconfont">&#xe600;</i>
-			<p>表单</p>
-		</a>
-		<a class="barLi" href="#">
-			<i class="iconfont">&#xe649;</i>
-			<p>考核预评估</p>
-		</a>
-		<a class="barLi" href="#">
-			<i class="iconfont">&#xe604;</i>
-			<p>工单查阅</p>
-		</a>
-		<a class="barLi" href="#">
-			<i class="iconfont">&#xe619;</i>
-			<p>我</p>
-		</a>
-	</div>
+	<div class="bottombar" id="bottomBar"></div>
 </div>
 <script src="js/date/mobiscroll_date.js" charset="gb2312"></script> 
 <script src="js/date/mobiscroll.js"></script> 
@@ -157,6 +164,30 @@ $(function () {
 	$("#date").mobiscroll($.extend(opt['date'], opt['default']));
 	$("#dateTime").mobiscroll($.extend(opt['datetime'], opt['default']));
 	$("#time").mobiscroll($.extend(opt['time'], opt['default']));
+});
+$(function(){
+	$('#bottomBar').bottomList({
+		btns:[
+			{icon:'&#xe602;',name:'首页',isCurrent:1},
+			{icon:'&#xe61a;',name:'列表',isCurrent:0},
+			{icon:'&#xe636;',name:'登录',isCurrent:0},
+			{icon:'&#xe667;',name:'客服',isCurrent:0},
+			{icon:'&#xe608;',name:'专享',isCurrent:0}
+		],
+		cevent:[
+			function(btn){
+				window.location='index.html';
+			},
+			function(){
+				window.location='list-menu.html';
+			},
+			function(){
+				window.location='login.html';
+			},
+			function(){},
+			function(){}
+		]
+	});
 });
 </script>
 </body>

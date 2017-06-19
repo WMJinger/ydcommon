@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UI-YD</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi"/>
+	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+	<script src="js/libjs/jquery-1.11.1.min.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="topbar">
+		<span class="topbar-title">列表</span>
+	</div>
+	<div class="content">
+		<div class="carousel-wrap" id="carousel"></div>
+		<div class="sel-list">
+			<a href="login.html">
+				<i class="iconfont sel-list-ico">&#xe649;</i>
+				<span class="sel-list-name">登录页</span>
+				<i class="iconfont next-ico">&#xe63f;</i>
+			</a>
+			<a>
+				<i class="iconfont sel-list-ico">&#xe649;</i>
+				<span class="sel-list-name">列表2</span>
+				<i class="iconfont next-ico">&#xe63f;</i>
+			</a>
+			<a>
+				<i class="iconfont sel-list-ico">&#xe649;</i>
+				<span class="sel-list-name">列表3</span>
+				<i class="iconfont next-ico">&#xe63f;</i>
+			</a>
+			<a>
+				<i class="iconfont sel-list-ico">&#xe649;</i>
+				<span class="sel-list-name">列表4</span>
+				<i class="iconfont next-ico">&#xe63f;</i>
+			</a>
+		</div>
+	</div>
+	<div class="bottombar" id="bottomBar"></div>
+</div>
+<script type="text/javascript">
+$('#bottomBar').bottomList({
+	btns:[
+		{icon:'&#xe602;',name:'首页',isCurrent:0},
+		{icon:'&#xe61a;',name:'列表',isCurrent:2},
+		{icon:'&#xe636;',name:'登录',isCurrent:0},
+		{icon:'&#xe667;',name:'客服',isCurrent:0},
+		{icon:'&#xe608;',name:'专享',isCurrent:0}
+	],
+	cevent:[
+		function(btn){
+			window.location='index.html';
+		},
+		function(){
+			window.location='list-menu.html';
+		},
+		function(){
+			window.location='login.html';
+		},
+		function(){},
+		function(){}
+	]
+});
+//轮播图配置
+$('#carousel').icarousel({
+	images:[
+		{imgsrc:'images/carousel/1.jpg',link:'http://www.baidu.com',isCurrent:1},
+		{imgsrc:'images/carousel/2.jpg',link:'http://www.baidu.com',isCurrent:0},
+		{imgsrc:'images/carousel/3.jpg',link:'http://www.baidu.com',isCurrent:0},
+		{imgsrc:'images/carousel/4.jpg',link:'http://www.baidu.com',isCurrent:0}
+	],
+	tickTime:3000
+});
+</script>
+</body>
+</html>

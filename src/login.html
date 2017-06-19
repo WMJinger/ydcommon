@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UI-YD</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi"/>
+	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+	<script src="js/libjs/jquery-1.11.1.min.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<img class="login-bg" src="images/carousel/6.jpg">
+<div class="container">
+	<div class="topbar" style="background-color: transparent;">
+		<a class="iconfont back-ico" href="index.html">&#xe601;</a>
+		<span class="topbar-title">登录</span>
+	</div>
+	<div class="login-wrap">
+		<h1 class="login-title">LOGO</h1>
+		<ul class="login-form">
+			<li class="user-ip">
+				<i class="iconfont">&#xe605;</i>
+				<input class="txt txt1" type="text" placeholder="账号/手机/邮箱" />
+			</li>
+			<li class="psw-ip">
+				<i class="iconfont">&#xe610;</i>
+				<input class="txt txt1" type="text" placeholder="密码" />
+			</li>
+			<li class="code-ip">
+				<i class="iconfont">&#xe69b;</i>
+				<input class="txt txt1" type="text" placeholder="验证码" />
+				<a id="sendCode" class="sendcode-btn" href="javascript:sendCode($('#sendCode'));">点击获取</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="btn btn1">登录</a>
+				<div class="logenter-wrap">
+					<a href="javascript:;">注册账号</a>
+					<a href="javascript:;">忘记密码？</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="otherway-wrap">
+		<div><span>其他登录方式</span></div>
+		<a href="javascript:;" class="iconfont wx">&#xe675;</a>
+		<a href="javascript:;" class="iconfont wb">&#xe603;</a>
+		<a href="javascript:;" class="iconfont qq">&#xe606;</a>
+	</div>
+</div>
+</body>
+</html>
