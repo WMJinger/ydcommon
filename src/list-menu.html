@@ -4,14 +4,14 @@
 	<title>UI-YD</title>
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi"/>
-	<link rel="stylesheet" type="text/css" href="css/common.css"/>
-	<script src="js/libjs/jquery-1.11.1.min.js"></script>
-	<script src="js/common.js"></script>
+	<link rel="stylesheet" type="text/css" href="common/css/style.css"/>
+	<script src="common/js/libjs/jquery-1.11.1.min.js"></script>
+	<script src="common/js/common.js"></script>
 </head>
 <body>
 <div class="container">
-	<div class="topbar">
-		<span class="topbar-title">列表</span>
+	<div class="top-bar">
+		<span class="top-bar-title">列表</span>
 	</div>
 	<div class="content">
 		<div class="carousel-wrap" id="carousel"></div>
@@ -38,7 +38,19 @@
 			</a>
 		</div>
 	</div>
-	<div class="bottombar" id="bottomBar"></div>
+	<div class="bottom-bar">
+		<a class="bar-list" href="index.html">
+			<i class="iconfont">&#xe602;</i>
+			<p>首页</p></a>
+		<a class="bar-list current" href="list-menu.html">
+			<i class="iconfont">&#xe61a;</i>
+			<p>列表</p>
+		</a>
+		<a class="bar-list " href="login.html">
+			<i class="iconfont">&#xe636;</i>
+			<p>登录</p>
+		</a>
+	</div>
 </div>
 <script type="text/javascript">
 $('#bottomBar').bottomList({

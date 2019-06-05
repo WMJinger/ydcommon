@@ -105,7 +105,7 @@ body {
     date:2017-2-13
     author:wumj
 */
-.topbar {
+.top-bar {
   height: 0.88rem;
   background-color: #0f90ce;
   position: fixed;
@@ -115,14 +115,14 @@ body {
   left: 0;
   text-align: center;
 }
-.topbar .topbar-title {
+.top-bar .top-bar-title {
   display: inline-block;
   height: 100%;
   color: #fff;
   font-size: 0.36rem;
   line-height: 0.88rem;
 }
-.topbar .back-ico {
+.top-bar .back-ico {
   position: absolute;
   top: 0;
   left: 0.14rem;
@@ -131,7 +131,7 @@ body {
   height: 0.88rem;
   line-height: 0.88rem;
 }
-.topbar .right-link {
+.top-bar .right-link {
   position: absolute;
   top: 0;
   right: 0.14rem;
@@ -139,7 +139,7 @@ body {
   height: 0.88rem;
   line-height: 0.88rem;
 }
-.topbar .iconfont {
+.top-bar .iconfont {
   padding-right: 0.04rem;
 }
 /*
@@ -147,7 +147,7 @@ body {
     date:2017-2-13
     author:wumj
 */
-.bottombar {
+.bottom-bar {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -157,28 +157,28 @@ body {
   background-color: #f5f5f5;
   border-top: 1px solid #e4e4e4;
 }
-.bottombar .barLi {
+.bottom-bar .bar-list {
   height: 100%;
   float: left;
   box-sizing: border-box;
-  width: 20%;
+  width: 33.33333333%;
   cursor: pointer;
   text-align: center;
 }
-.bottombar .barLi p {
+.bottom-bar .bar-list p {
   font-size: 0.22rem;
   color: #666666;
 }
-.bottombar .barLi.current p,
-.bottombar .barLi.current .iconfont,
-.bottombar .barLi:hover p,
-.bottombar .barLi:hover .iconfont {
+.bottom-bar .bar-list.current p,
+.bottom-bar .bar-list.current .iconfont,
+.bottom-bar .bar-list:hover p,
+.bottom-bar .bar-list:hover .iconfont {
   color: #0f90ce;
 }
-.bottombar .barLi:active {
+.bottom-bar .bar-list:active {
   background-color: #e3e3e3;
 }
-.bottombar .iconfont {
+.bottom-bar .iconfont {
   display: inline-block;
   margin-top: 0.1rem;
   font-size: 0.44rem;
@@ -561,7 +561,7 @@ body {
   font-size: 0.32rem;
   padding-right: 0.14rem;
 }
-/* 
+/*
 	name:内容弹窗样式
 	date:2017-01-11
 	author:wumj
@@ -584,7 +584,7 @@ body {
 .pop-wrap .btn-wrap .btn {
   margin-bottom: 0;
 }
-/* 
+/*
 	name:登录页
 	date:2017-03-02
 	author:wumj
@@ -712,7 +712,7 @@ body {
   margin-top: 0.2rem;
   color: #333;
 }
-/* 
+/*
 	name:轮播图
 	date:2017-06-16
 	author:wumj
@@ -770,7 +770,7 @@ body {
   opacity: 1;
   background-color: #51bef2;
 }
-/* 
+/*
 	name:一行搜索框
 	date:2017-06-16
 	author:wumj

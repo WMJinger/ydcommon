@@ -2,9 +2,15 @@
   "name": "yd_common",
   "author":"ui",
   "version": "1.0.1",
-  "devDependencies": {
+  "dependencies": {
     "grunt": "^1.0.1",
-    "grunt-contrib-jshint": "^1.1.0",
-    "grunt-contrib-uglify": "^2.0.0"
+    "grunt-cli": "^1.0.1",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-css": "^0.5.4"
+  },
+  "scripts": {
+    "grunt": "grunt"
   }
 }

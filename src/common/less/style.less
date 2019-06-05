@@ -1,0 +1,866 @@
+/*
+    name:移动端常用css文件
+    note:所有长度单位均使用rem，绝对长度可使用px,rem=视觉稿实际宽度/100
+    date:2017-2-9
+    author:UI
+*/
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, a, code, em, img, q, small, strong, dd, dl, dt, li, ol, ul, fieldset, form, label, table, tbody, tr, th, td, input {
+  margin: 0;
+  padding: 0;
+  border: 0
+}
+
+a, a:active, a:hover, a:focus, a:visited {
+  text-decoration: none;
+}
+
+a, img {
+  -webkit-touch-callout: none;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+textarea, input[type="password"], input[type="text"] {
+  resize: none;
+  outline: 0;
+  -webkit-appearance: none;
+  background: #fff;
+}
+
+body {
+  width: 7.5rem;
+  max-width: 1080px;
+  margin: 0 auto;
+  background: #f6f6f6;
+  color: #333;
+  font-family: 'Microsoft YaHei';
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-size: 0.3rem; //默认字体大小，相当于14px;
+}
+
+.bhpop {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/*
+    name:字体图标库
+    date:2017-2-14
+    author:wumj
+*/
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/iconfont.eot');
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../font/iconfont.woff') format('woff'),
+  url('../font/iconfont.ttf') format('truetype'),
+  url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-base-family: "Microsoft YaHei";
+// color parameter
+@main-color: rgb(15, 144, 206);
+@sub-color1: rgb(251, 121, 43);
+@sub-color2: rgb(28, 170, 43);
+@border-color: #e4e4e4;
+@font-base-color: #333333;
+@font-base-subcolor: #666666;
+@font-base-fidcolor: #999999;
+
+@form-size-gap: 0.14rem;
+@radius-size: 4px;
+@txt-height: 0.5rem;
+.active() {
+  background-color: #e3e3e3;
+}
+
+/*
+    name:顶部栏样式
+    date:2017-2-13
+    author:wumj
+*/
+@barH: 0.88rem; //头部高度
+.top-bar {
+  height: @barH;
+  background-color: @main-color;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  .top-bar-title {
+    display: inline-block;
+    height: 100%;
+    color: #fff;
+    font-size: 0.36rem;
+    line-height: @barH;
+  }
+  .back-ico {
+    position: absolute;
+    top: 0;
+    left: @form-size-gap;
+    font-size: 0.4rem;
+    color: #fff;
+    height: @barH;
+    line-height: @barH;
+  }
+  .right-link {
+    position: absolute;
+    top: 0;
+    right: @form-size-gap;
+    color: #fff;
+    height: @barH;
+    line-height: @barH;
+  }
+  .iconfont {
+    padding-right: 0.04rem;
+  }
+}
+
+/*
+    name:底部栏样式
+    date:2017-2-13
+    author:wumj
+*/
+@bottombarH: 1rem;
+.bottom-bar {
+  @ListNum: 3; //底部栏个数,建议>=2 && <=5
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: @bottombarH;
+  background-color: #f5f5f5;
+  border-top: 1px solid @border-color;
+  .bar-list {
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    width: percentage(1/@ListNum);;
+    cursor: pointer;
+    text-align: center;
+    p {
+      font-size: 0.22rem;
+      color: @font-base-subcolor;
+    }
+    &.current p,
+    &.current .iconfont,
+    &:hover p,
+    &:hover .iconfont {
+      color: @main-color;
+    }
+    &:active {
+      .active;
+    }
+  }
+  .iconfont {
+    display: inline-block;
+    margin-top: 0.1rem;
+    font-size: 0.44rem;
+    color: #9ba5ae;
+    margin-bottom: 0.05rem;
+  }
+}
+
+/*
+    name:中间内容
+    date:2017-2-14
+    author:wumj
+*/
+.content {
+  margin-top: @barH;
+  margin-bottom: @bottombarH;
+}
+
+/*
+    name:文本框
+    date:2017-2-14
+    author:wumj
+*/
+.txt,
+.tarea {
+  border-left: 1px solid @border-color;
+  padding-left: 0.16rem;
+  padding-right: 0.08rem;
+  color: @font-base-subcolor;
+  outline: none;
+  background-color: #fff;
+  font-family: @font-base-family;
+  box-sizing: border-box;
+  font-size: 0.3rem;
+}
+
+.txt {
+  height: @txt-height;
+  line-height: @txt-height;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+
+.txt1 {
+  width: 100%;
+}
+
+.txt-date {
+  width: 100%;
+  padding-right: 0.4rem;
+}
+
+.time-ico {
+  position: absolute;
+  top: 50%;
+  right: @form-size-gap;
+  font-size: 0.38rem;
+  margin-top: -0.24rem;
+}
+
+.tarea {
+  border: 1px solid @border-color;
+  resize: none;
+}
+
+.tarea1 {
+  width: 100%;
+  height: 1.6rem;
+}
+
+/*
+    name:按钮样式
+    date:2017-2-16
+    author:wumj
+*/
+.btn-wrap {
+  padding: @form-size-gap;
+}
+
+.btn-wrap .btn {
+  margin-bottom: @form-size-gap;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: @radius-size;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.btn1 {
+  height: 0.8rem;
+  line-height: 0.8rem;
+  width: 100%;
+  background-color: @main-color;
+  border-color: @main-color;
+  color: #fff;
+}
+
+.btn2 {
+  height: 0.8rem;
+  line-height: 0.8rem;
+  width: 100%;
+  background-color: #fff;
+  border-color: @main-color;
+  color: @main-color;
+}
+
+.btn3 {
+  height: 0.8rem;
+  line-height: 0.8rem;
+  width: 49.3%;
+  background-color: @sub-color1;
+  border-color: @sub-color1;
+  color: #fff;
+}
+
+.btn4 {
+  height: 0.8rem;
+  line-height: 0.8rem;
+  width: 49.3%;
+  background-color: #fff;
+  border-color: @main-color;
+  color: @main-color;
+}
+
+.btn5 {
+  height: 0.8rem;
+  line-height: 0.8rem;
+  width: 49.2%;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 0;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-bottom-width: 0;
+  border-right: 1px solid @border-color;
+  text-align: center;
+  color: @font-base-color;
+
+}
+
+.btn5:active {
+  .active;
+}
+
+.btn6,
+.btn7 {
+  height: 0.8rem;
+  line-height: 0.8rem;
+  width: 49.2%;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 0;
+  border-width: 0;
+  color: @main-color;
+  text-align: center;
+}
+
+.btn7 {
+  width: 100%;
+}
+
+.btn6:active,
+.btn7:active {
+  .active;
+}
+
+.btn8 {
+  height: 0.8rem;
+  line-height: 0.8rem;
+  width: 100%;
+  background-color: @sub-color1;
+  border-color: @sub-color1;
+  color: #fff;
+  width: 100%;
+}
+
+.btn-disabled {
+  height: 0.7rem;
+  line-height: 0.7rem;
+  width: 100%;
+  background-color: #ccc;
+  border-color: #ccc;
+  color: #fff;
+}
+
+.switch {
+  font-size: 0.7rem;
+  color: #666;
+}
+
+.switch.on {
+  color: @main-color;
+}
+
+.list-detial .switch {
+  position: absolute;
+  top: 50%;
+  margin-top: -0.35rem;
+  right: @form-size-gap;
+}
+
+/*
+    name:表单列表
+    date:2017-2-14
+    author:wumj
+*/
+@listH: 0.5rem; //列表高度
+.form-list {
+  margin: @form-size-gap 0;
+
+  background-color: #fff;
+  > li {
+    height: auto;
+    padding: @form-size-gap @form-size-gap @form-size-gap 30%;
+    position: relative;
+    border-bottom: 1px solid #f5f5f5;
+  }
+  .list-name {
+    position: absolute;
+    left: @form-size-gap;
+    top: 50%;
+    width: 30%;
+    height: @listH;
+    line-height: @listH;
+    margin-top: -@listH/2;
+    color: @font-base-color;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .list-name em {
+    color: #f00;
+    padding-right: 0.04rem;
+  }
+  .list-detial {
+    display: inline-block;
+    width: 100%;
+    min-height: @listH;
+    line-height: normal;
+    // text-align: right;
+    .cbox {
+      vertical-align: middle;
+    }
+  }
+}
+
+/*
+    name:下拉框
+    date:2017-2-14
+    author:wumj
+*/
+.shade {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.dropValue {
+  position: relative;
+  display: block;
+  height: @listH;
+  line-height: @listH;
+  color: @font-base-subcolor;
+  width: 100%;
+  padding-right: 0.4rem;
+  padding-left: 0.08rem;
+  box-sizing: border-box;
+  z-index: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-detial .down-ico {
+  position: absolute;
+  top: 50%;
+  margin-top: -0.18rem;
+  right: @form-size-gap;
+  font-size: 0.26rem;
+  z-index: 1;
+}
+
+.dropList {
+  background-color: #fff;
+  transition: all 0.3s;
+  position: fixed;
+  z-index: 4;
+  left: 0;
+  width: 100%;
+  bottom: -100%;
+  text-align: left;
+}
+
+.dropList-title {
+  display: inline-block;
+  padding: @form-size-gap;
+  color: @font-base-fidcolor;
+}
+
+.dropList-detial {
+  overflow-y: auto;
+  max-height: 5.8rem;
+  padding: 0 @form-size-gap;
+}
+
+.dropList-detial li {
+  position: relative;
+  height: 0.5rem;
+  padding: 0.1rem 0;
+  border-bottom: 1px solid #f5f5f5;
+  color: @form-size-gap;
+}
+
+.dropList-detial li .valueLi {
+  position: relative;
+  display: block;
+  line-height: 0.5rem;
+  padding-right: 0.4rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  z-index: 2;
+}
+
+.dropList-detial li .rbx-ico {
+  position: absolute;
+  top: 50%;
+  right: @form-size-gap;
+  font-size: 0.36rem;
+  margin-top: -0.24rem;
+  color: lighten(@font-base-fidcolor, 10%);
+  z-index: 1;
+}
+
+.dropList-detial .selected .rbx-ico {
+  color: @main-color;
+}
+
+/*
+    name:单选、复选样式
+    note:将input隐藏，设置label标签的背景，替换成checkbox，实现自定义标签样式
+    date:2017-2-14
+    author:wumj
+*/
+.cbox {
+  display: inline-block;
+}
+
+.cbox input {
+  display: none;
+}
+
+.cbox label {
+  position: relative;
+  display: block;
+  padding-left: 0.5rem;
+}
+
+.cbox label .cbox-ico {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -0.22rem;
+  font-size: 0.4rem;
+  color: @font-base-fidcolor;
+}
+
+.cbox input:checked + label .cbox-ico {
+  color: @main-color;
+}
+
+/*
+    name:选择列表
+    date:2017-2-27
+    author:wumj
+*/
+.sel-list {
+  @listH: 0.8rem;
+  padding-top: @form-size-gap;
+  > a {
+    position: relative;
+    display: block;
+    height: @listH;
+    line-height: @listH;
+    padding: 0 @form-size-gap;
+    background-color: #fff;
+    color: @font-base-color;
+    border-bottom: 1px solid @border-color;
+  }
+  > a:active {
+    .active;
+  }
+  > a:visited {
+    color: @font-base-color;
+  }
+  .sel-list-ico {
+    display: inline-block;
+    margin-right: @form-size-gap;
+    font-size: 0.36rem;
+  }
+  .next-ico {
+    position: absolute;
+    right: @form-size-gap;
+    top: 0;
+    font-size: 0.24rem;
+  }
+  h1 {
+    height: @listH;
+    line-height: @listH;
+    color: @main-color;
+    font-weight: normal;
+    font-size: 0.3rem;
+    padding: 0 @form-size-gap;
+    background-color: #fff;
+  }
+  h1 .iconfont {
+    font-size: 0.32rem;
+    padding-right: @form-size-gap;
+  }
+}
+
+/*
+	name:内容弹窗样式
+	date:2017-01-11
+	author:wumj
+*/
+.pop-wrap {
+  position: fixed;
+  z-index: 5;
+  display: none;
+  border-radius: @radius-size;
+  background-color: #fff;
+}
+
+.pop-content {
+  padding: 0.2rem;
+  text-align: left;
+}
+
+.pop-wrap .btn-wrap {
+  padding: 0;
+  border-top: 1px solid @border-color;
+}
+
+.pop-wrap .btn-wrap .btn {
+  margin-bottom: 0;
+}
+
+/*
+	name:登录页
+	date:2017-03-02
+	author:wumj
+*/
+.login-bg {
+  position: fixed;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  z-index: 0;
+  filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
+  -webkit-filter: blur(14px); /* Chrome, Opera */
+  -moz-filter: blur(14px);
+  -ms-filter: blur(14px);
+  filter: blur(14px);
+}
+
+.login-wrap {
+  padding: 5*@form-size-gap;
+  position: relative;
+  z-index: 1;
+  .login-title {
+    margin-top: 1.5rem;
+    text-align: center;
+    margin-bottom: 0.3rem;
+  }
+}
+
+.login-form li {
+  position: relative;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  margin-bottom: 0.2rem;
+  line-height: 0.5rem;
+  vertical-align: middle;
+}
+
+.login-form li.code-ip {
+  padding-right: 1.8rem;
+}
+
+.login-form li.user-ip,
+.login-form li.psw-ip,
+.login-form li.code-ip {
+  padding-left: 0.6rem;
+  border-bottom: 1px solid #333;
+}
+
+.sendcode-btn {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0.1rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  color: #fff;
+  padding: 0 0.2rem;
+}
+
+.sendcode-btn.disabled {
+  color: #ccc;
+}
+
+.login-form li .iconfont {
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  font-size: 0.4rem;
+}
+
+.login-form li input {
+  color: #333;
+  border-left-width: 0;
+  background-color: transparent;
+
+}
+
+.login-form li input::-webkit-input-placeholder {
+  color: #666;
+}
+
+.login-form li .btn8 {
+  margin-top: 0.4rem;
+}
+
+.logenter-wrap {
+  margin-top: 0.1rem;
+  a {
+    color: #ccc;
+  }
+  a:first-child {
+    float: left;
+  }
+  a:last-child {
+    float: right;
+  }
+}
+
+.otherway-wrap {
+  padding: 2*@form-size-gap 5*@form-size-gap;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  div {
+    position: relative;
+  }
+  div span {
+    color: #ccc;
+  }
+  div:after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    content: '';
+    height: 1px;
+    width: 30%;
+    background-color: #aaa;
+  }
+  div:before {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    content: '';
+    height: 1px;
+    width: 30%;
+    background-color: #aaa;
+  }
+  a {
+    display: inline-block;
+    font-size: 0.8rem;
+    margin-right: 0.4rem;
+    margin-top: 0.2rem;
+    color: #333;
+  }
+}
+
+/*
+	name:轮播图
+	date:2017-06-16
+	author:wumj
+*/
+@carouselH: 3rem;
+@carouselW: 100%;
+.carousel-wrap {
+  position: relative;
+  width: @carouselW;
+  height: @carouselH;
+  overflow: hidden;
+  .carousel-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .carousel-img li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .carousel-img li.current {
+    opacity: 1;
+  }
+  .carousel-img li a {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+  }
+  .carousel-img img {
+    max-width: 100%;
+  }
+  .carousel-diot {
+    position: absolute;
+    bottom: 0.2rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+  }
+  .carousel-diot li {
+    display: inline-block;
+    width: 0.18rem;
+    height: 0.18rem;
+    border-radius: 50%;
+    margin-left: 0.08rem;
+    margin-right: 0.08rem;
+    background-color: #000;
+    opacity: 0.7;
+  }
+  .carousel-diot li.current {
+    opacity: 1;
+    background-color: lighten(@main-color, 20%);
+  }
+}
+
+/*
+	name:一行搜索框
+	date:2017-06-16
+	author:wumj
+*/
+@searchH: 0.7rem;
+.search-wrap {
+  position: relative;
+  height: @searchH;
+  margin: @form-size-gap @form-size-gap 0 @form-size-gap;
+  padding-right: @searchH+@form-size-gap;
+  background-color: #fff;
+  border: 1px solid @border-color;
+  .btn1 {
+    position: absolute;
+    border-radius: 0;
+    right: 0;
+    top: 0;
+    height: @searchH;
+    line-height: @searchH;
+    width: @searchH+@form-size-gap;
+    text-align: center;
+  }
+  .txt {
+    width: 100%;
+    border-left-width: 0;
+    height: @searchH;
+    line-height: @searchH;
+  }
+}
+
+
+
+
+
+
